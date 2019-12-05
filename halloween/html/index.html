@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Halloween</title>
+    <link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<!--Este diseño no es responsive es decir para el movil, solo para pc-->
+<style>
+body{background-color:black
+
+}
+#texto{position:relative;/*el texto se mueve para crentrarse*/
+    background-image:url(halloween\imagenes\calabazas.jpg);
+    width:1200px;
+    height:900px;
+    margin: 20px auto;
+    border-radius:50px;
+    box-shadow:rgba(111, 66, 153, 0.849) 20px 15px 30px ,
+    rgba(111, 66, 153, 0.849) -20px -15px 30px ,
+    rgba(111, 66, 153, 0.849) 20px -15px 30px ,
+    rgba(111, 66, 153, 0.849) -20px 15px 30px ;
+    
+}
+h1{position:absolute;/*lo que va dentrose mueve con el */
+    left:200px;
+    top:30px ;
+    font-family: 'Nosifer', cursive;
+    font-size:250%;
+    color:rgb(175, 120, 226)
+}
+#p1{font-family: 'Oswald', sans-serif;
+    color:rgba(22, 151, 153, 0.897);
+    position:absolute;
+    top:100px ;
+    left:200px;
+    font-size:200%
+}
+
+#vela{position:absolute;
+    width:150px;
+    height:130px;
+    top:550px;
+    left:540px;
+  
+}
+#craneo{position:absolute;
+    width:120px;
+    height:140px;
+    top:315px ;
+    left:530px ;
+    
+
+
+}
+#dracula{ position:absolute;
+    top:550px;
+    left:300px; 
+    visibility:hidden;
+
+
+
+}
+#draculin{position:absolute;
+border: azure 6px ;
+width:180px;
+height:280px;
+top:500px;
+left:320px;
+
+}
+#fantasma{position:absolute;
+top:250px;
+left:250px;
+visibility:hidden;
+
+
+}
+#casper{position:absolute;
+    border: azure 6px;
+width:270px;
+height:280px;
+top:250px;
+left:260px;
+visibility: hidden;
+
+
+
+}
+#linea{position:absolute;
+top:400px;
+left:200px;
+color:rgb(11, 14, 236);
+font-size:50px;
+visibility: hidden;
+
+
+
+}
+
+</style>
+<script>
+function mostrar(id){
+    document.getElementById(id).style.visibility="visible";
+}
+function ocultar(id){
+    document.getElementById(id).style.visibility="hidden";
+}
+
+function sonar(id){
+    document.getElementById(id).play();
+}
+function parar(id){
+document.getElementById(id).pause();
+
+}
+
+
+</script>
+<audio id="susto" >
+<source src="halloween\sonido\susto.mp3">
+    
+</audio>
+</head>
+<body>
+
+    <div id="texto">
+<h1>Scared halloween Party</h1>
+<p id= "p1"> 1º No toques la vela central</p>
+
+<div id= "vela" onclick="mostrar('dracula');sonar('susto')", onclick="mostar('linea')">
+</div>
+<div id="craneo" onclick="mostrar('fantasma');sonar('susto')"></div>
+<div id="linea">
+    <p> Te dije que no tocaras la vela pa que la tocas, toca el craneo anda haber si ahora haces caso</p>
+</div>
+<img id="fantasma" src="halloween\imagenes\fantasma.gif"  height=300px >
+<img id= "dracula"  src="halloween\imagenes\dracula.gif" height=300px>
+<div id="draculin" onclick="ocultar('dracula');parar('susto')"></div>
+<div id="casper" onclick="ocultar('fantasma')"></div>
+    
+    
+</body>
+</html>

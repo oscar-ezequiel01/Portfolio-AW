@@ -1,0 +1,60 @@
+/* Aqui tengo que editar todo el estilo de la paguina para a receta que eliga*/
+
+body{background-image: url(imagenes/images.jpg);
+    font-family: 'Parisienne', cursive;/* tengo que poner una imagen*/
+}
+#wrapper{position:absolute;
+    width:80%;
+    height:500px;/* luego lo borro*/
+    overflow:scroll ; /*esto es ppr si no cabe el contenido del texto*/
+    background-color: rgba(255, 255, 255, 0.849);
+    margin:auto;
+    padding:1vw;
+    border:1px solid black;
+}
+
+
+#receta{text-align:left;position:absolute
+    
+}
+#valornutricional{position:absolute;
+    top:650px
+
+
+}
+#cocinero{ position:absolute;
+    top:25px;
+    left: 1200px;
+
+}
+table{border:solid black 1px
+
+}
+table,tr,th,td{border:solid black 1px
+
+}
+#musica{position:absolute;
+    border:solid rgb(7, 233, 233) 1px  ;
+    width:500px;
+    height:500px;
+    top:25px;
+    left:1200px;
+}
+
+/* vamos a incluir una media query que se trata de incluir una especie e if y una condicion para que cambie algo en el estilo cuado tengo la pantalla pequeño*/
+@media only screen and (max-width:500px){
+
+#wrapper{
+
+
+}
+
+
+}
+
+#frase{position: relative;
+    top:10px;
+    left:500px;
+    
+
+}

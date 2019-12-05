@@ -1,0 +1,59 @@
+/* este es el estilo de portfolio de Pilar */
+body {font-family: 'Yanone Kaffeesatz', sans-serif;}
+#wrapper {width:85%;
+          height:600px;/* luego lo borro */
+          background-color:white;
+          margin:auto;}
+header {position:relative;
+        /* relative para que el título que va dentro,
+        lo pueda colocar con absolute, donde quiera */
+        background-image:url("imagen.png");
+        background-size:cover;
+        /* cover adapta bien la imagen responsive
+        pero la corta... */
+        background-position:center;
+        /* como mi imagen tiene lo importante en el centro,
+        debo poner background-position:center para que corte
+        de los lados */
+        height:300px;}
+#titulo {position:absolute;
+         width:40%;
+         top:125px;
+
+         /* OJO, RARO: para que el navegador calcule bien
+         el centro donde poner el titulo, hay que indicarle
+         estas 4 cosas: */
+         left:0px;
+         right:0px;
+         margin-left:auto;
+         margin-right:auto;
+
+         font-family: 'Yanone Kaffeesatz', sans-serif;
+         font-size:2.5em;
+         background-color:rgba(255, 255, 255, 0.7);
+         text-align:center;}
+/* estilo de main */
+       h1 {text-align:center;}
+/* cada polaroid es una card, una foto con texto de mis trabajos */
+       div.polaroid {
+        /* les pongo el 40% de width y float:left, y así caben dos por fila */
+        float:left;
+        width: 40%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+        margin-left:5%;
+      }
+      /* con esto, al poner el ratón encima, consigo que se difumine la card */
+      div.polaroid:hover {opacity:0.5}
+      /* esto es el texto que acompaña a la polaroid */
+      div.container {
+        text-align: center;
+        padding: 10px 20px;
+      }
+      /* si la ventana de visualización se achica, como en un móvil,
+         la card pasa a ocupar un 90% del ancho, y así solo se ve una
+         por fila, y no quedan tan pequeñas */
+      @media screen and (max-width:500px){
+        div.polaroid{width:90%;}
+      }
